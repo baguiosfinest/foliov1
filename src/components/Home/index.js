@@ -94,6 +94,7 @@ const Home = () => {
       { isloading ? 
         <Loading />
         :
+        // TODO: needed to change this
         colorArr.map((color, index) => 
           {
             // TODO: Make function of showing random Boxes
@@ -129,8 +130,8 @@ const Home = () => {
           }
         )}
 
-      <ActivePage isActive={active} togglePage={ togglePage } bgcolor={ activeBgColor } color={bgcolor} pageIndex={pagenum} title={pagetitle} />
-
+        <ActivePage isActive={active} togglePage={ togglePage } bgcolor={ activeBgColor } color={bgcolor} pageIndex={pagenum} title={pagetitle} />
+      
     </div>
         
   );

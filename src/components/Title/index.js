@@ -1,12 +1,13 @@
 import React from 'react'
 
-export default function Title({ title, color }) {
+export default function Title({ title, color, position = `left` }) {
 
   let headerStyle = {
     margin: "0 auto",
     maxWidth: "1280px",
     padding: "30px 0",
     width: "100%",
+    textAlign: position,
   }
 
   let titleStyle = {

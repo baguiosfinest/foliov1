@@ -1,20 +1,68 @@
 @import "../../../css/mixins";
+@import "../../../css/animations";
 
 .section-works {
   width: 100%;
-  height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  .button-back {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+
+  &-main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+
+    @include respond-below(sm) {
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+
+    }
+  }
+
+  .work-active {
+    background: red;
+    width: 100%;
+    height: 0;
+    opacity: 1;
+    @extend .slide-in-fwd-bottom;
+  }
+
+  &-active {
+    .section-works-main {
+      @extend .slide-out-fwd-top;
+      height: 0;
+      overflow: hidden;
+    }
+    .work-active {
+      height: 90vh;
+    }
+  }
+
   @include respond-below(sm) {
     flex-direction: column;
-    height: auto;
+    height: 100vh;
+    justify-content: center;
+
   }
+
   header, &-navigation {
     flex: 1;
     width: 50%;
 
     @include respond-below(sm) {
       width: 100%;
+      flex: none;
     }
   }
   &-navigation {
@@ -57,4 +105,10 @@
     }
   }
 
+}
+
+.work-active {
+  height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
 }

@@ -6,7 +6,7 @@ import "./box.scss";
 
 export default function PageBox({ title, color, classname, num, handleBoxClick, randex }) {
   const [active, setActive] = useState(false);
-
+  console.log(color);
   const onHandleClick = () => {
     if(handleBoxClick) {
       handleBoxClick({ num, title, color});
@@ -23,6 +23,10 @@ export default function PageBox({ title, color, classname, num, handleBoxClick, 
     }
     if(handleBoxClick) {
       containerClass += 'has-content ';
+    }
+
+    if(color[0] == 'lightgreen' || color[0] == 'lime' || color[0] == 'yellow' || color[0] == 'amber' || color[0] == 'orange') {
+      containerClass += 'text-dark';
     }
 
     return containerClass;

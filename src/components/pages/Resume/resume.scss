@@ -1,0 +1,142 @@
+$accent: #E1D4CC;
+
+.section-resume {
+  overflow-y: auto;
+}
+
+.paperbox {
+  width: 100%;
+  min-height: 100%;
+  background: #fff;
+  display: flex;
+  color: #000;
+  .sidebar {
+    flex: 1.2;
+    background: $accent;
+    border-left: 10px solid #fff;
+    padding: 40px 30px 40px 30px;
+    .subtitle{
+      margin-right: -30px;
+    }
+  }
+
+  .main-content {
+    flex: 3;
+    .inner {
+      padding: 30px 40px;
+    }
+  }
+
+  .header {
+    background: #2D2D2D;
+    color: $accent;
+    padding: 80px 40px 40px;
+    h1, h4 {
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    h4 {
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+  }
+
+  .photo {
+    max-width: 160px;
+    width: 100%;
+    height: 160px;
+    margin: 0 auto;
+    background: #2d2d2d;
+    color: $accent;
+    border: #000 2px solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h3 {
+      font-size: 7rem;
+      margin: 0;
+    }
+  }
+
+}
+
+.has-icon {
+  margin: 0 0 30px 70px;
+  position: relative;
+  
+  
+  .ic {
+    position: absolute;
+    top: 0;
+    left: -70px;
+    width: 50px;
+    height: 50px;
+    border: #000 2px solid;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.icontext {
+  display: flex;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  .ic {
+    flex: 1;
+  }
+  .text {
+    flex: 5;
+    font-weight: 300;
+    h4 {
+      margin: 0;
+      font-weight: bold;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.bullettext {
+  display: flex;
+  padding-bottom: 20px;
+  padding-left: 45px;
+  margin-left: 25px;
+  border-left: #000 2px solid;
+  position: relative;
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: $accent;
+    border-radius: 50%;
+    border: #000 2px solid;
+    left: -8px;
+    top: 0;
+    position: absolute;
+  }
+  .col1 {
+    padding-right: 20px;
+  }
+  .col2 {
+    font-size: .9rem;
+    strong {
+      font-size: 1.3rem;
+    }
+  }
+  &.last{
+    border-left: none;
+  }
+}

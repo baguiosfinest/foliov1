@@ -25,6 +25,10 @@ body {
     overflow: auto;
     flex-wrap: nowrap;
 
+    &.isloading {
+      flex-wrap: wrap;
+    }
+
     &-active {
       .pagebox-wrapper {
         display: none;

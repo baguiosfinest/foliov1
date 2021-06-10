@@ -1,5 +1,6 @@
 import React from 'react';
 import "./activepage.scss";
+import { Link } from "react-router-dom";
 import { About, Contact, Works, Resume, Playground } from "../pages";
 
 
@@ -14,15 +15,16 @@ export default function ActivePage({title, isActive, pageIndex, color, togglePag
       case 'About' : return <About title = {title} color={color} togglePage={togglePage} />;
       case 'Works' : return <Works title = {title} color={color} togglePage={togglePage}  />;
       case 'Contact' : return <Contact title = {title} color={color} togglePage={togglePage}  />;
-      case 'Resume' : return <Resume title = {title} color={color} togglePage={togglePage}  />;
+      case 'Resume' : return <Resume title = {title} color={color} togglePage={togglePage} />;
       case 'Playground' : return <Playground title = {title} color={color} togglePage={togglePage}  />;
+
     }
   }
 
   return (
     <div className={ isActive ? bgcolor + `-gradient activepage is-active` : `activepage is-inactive` }>
-      <div className="close" onClick={ exitPage }></div>
-      { handlePages() }
+      <Link exact to="/"><div className="close" onClick={ exitPage }></div></Link>
+      { isActive ? handlePages() : '' }
     </div>
   )
 }

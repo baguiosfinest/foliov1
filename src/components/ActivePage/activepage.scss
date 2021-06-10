@@ -18,14 +18,14 @@
   z-index: 0;
   opacity: 0;
   transition: all 0.5s ease;
-  animation-delay: 2.6s!important;
+  animation-delay: 2s!important;
   @include respond-below(sm) {
     padding: 30px;
   }
   &.is-inactive {
     z-index: 0;
     @extend .fade-out;
-    animation-delay: 0s!important;
+    animation-delay: 1s!important;
     opacity: 1;
   }
 

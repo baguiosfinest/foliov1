@@ -21,6 +21,9 @@
     @include respond-below(sm) {
       min-height: 40px;
     }
+    &.text-dark {
+      color: #000;
+    }
     &.logobox,
     &.has-content {
       cursor: pointer;
@@ -193,7 +196,7 @@
         &.logobox,
         &.pg-0, &.pg-1, &.pg-2, &.pg-3, &.pg-4, &.pg-5, &.pg-6, &.pg-7, &.pg-8,
         &.pg-9, &.pg-10, &.pg-11, &.pg-12, &.pg-13, &.pg-14, &.pg-15, &.pg-16, &.pg-17, &.pg-18{ 
-          // @extend .slide-out-fwd-right;
+          
         }
         
       }
@@ -201,3 +204,4 @@
     }
   }
 }
+
