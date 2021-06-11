@@ -1,12 +1,12 @@
 import React from 'react';
 import Title from "../../Title";
-import Loader from "./Components/Loader";
+// import Loader from "./Components/Loader";
 
 export default function Playground({title, isActive, pageIndex, color, togglePage}) {
 
-  const exitPage = () => {
-    togglePage()
-  }
+  // const exitPage = () => {
+  //   togglePage()
+  // }
 
   return (
     <section className="section section-playground">

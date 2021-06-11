@@ -7,15 +7,15 @@ export default function Sidebar({ infos, socials, photo }) {
       <Photo photo={ photo } />
       <Subtitle title="Info" />
       {
-        infos.map((info) => {
-          return <IconText icon={ info.icon } title={ info.title } text={ info.text } />
+        infos.map((info, i) => {
+          return <IconText key={`info-` + i} icon={ info.icon } title={ info.title } text={ info.text } />
         })
       }
       <br />
       <Subtitle title="Social" />
       {
-        socials.map((social) => {
-          return <IconText fabic={true} icon={ social.icon } title={ social.title } text={ social.text } />
+        socials.map((social, i) => {
+          return <IconText key={`social-` + i} fabic={true} icon={ social.icon } title={ social.title } text={ social.text } />
         })
       }
       <br />

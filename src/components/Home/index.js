@@ -6,15 +6,8 @@ import Loading from "./../Loading";
 
 import { colorArr, profileColor} from "./../../js/colors";
 import { shuffle } from '../../js/helpers';
-import {
-  Switch,
-  Route,
-  useLocation,
-} from "react-router-dom";
 
 import { About, Work, Contact, Playground } from "../pages";
-
-
 
 let ranNums = shuffle([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]);
 const pages = [{
@@ -105,7 +98,7 @@ const Home = () => {
                   return (
                     <>
                       <PageBox randex={ranNums[index]} num="logo" classname="logobox" title={`SONNY TAMBIAC`} color={ profileColor } key="logo" />
-                      <PageBox randex={ranNums[index + 1]} handleBoxClick={ pageClick } num={index} title={pages[i].page} color={color} key={index.toString()} />
+                      <PageBox randex={ranNums[index + 1]} handleBoxClick={ pageClick } num={index} title={pages[i].page} color={color} key={`page-` + index } />
                     </>
                   )
                 } else {
@@ -113,7 +106,7 @@ const Home = () => {
                   return (
                     <>
                       <PageBox randex={ranNums[index]} num="logo" classname="logobox" title={`SONNY TAMBIAC`} color={ profileColor } key="logo" />
-                      <PageBox randex={ranNums[index + 1]} num={index} title={color[0].title} color={color} key={index.toString()} />
+                      <PageBox randex={ranNums[index + 1]} num={index} title={color[0].title} color={color} key={`page-` + index } />
                     </>
                   )
                 }
@@ -123,10 +116,10 @@ const Home = () => {
             }
             for(let i = 0; i < pages.length; i++) {
               if (pages[i].id === index) {
-                return <PageBox randex={ranNums[index]} handleBoxClick={ pageClick } num={index} title={pages[i].page} color={color} key={index.toString()} />
+                return <PageBox randex={ranNums[index]} handleBoxClick={ pageClick } num={index} title={pages[i].page} color={color} key={`page-` + index } />
               }
             } 
-            return <PageBox randex={ranNums[index]} num={index} title={color[0].title} color={color} key={index.toString()} />
+            return <PageBox randex={ranNums[index]} num={index} title={color[0].title} color={color} key={`page-` + index } />
           }
         )}
 

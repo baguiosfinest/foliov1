@@ -3,9 +3,9 @@ import Title from '../../Title';
 import './contact.scss';
 
 const Contact = ({title, isActive, pageIndex, color, togglePage}) => {
-  const exitPage = () => {
-    togglePage()
-  }
+  // const exitPage = () => {
+  //   togglePage()
+  // }
 
   return (
     <section className="section section-contact">

@@ -12,7 +12,7 @@ export default function Works({title, isActive, pageIndex, color, togglePage}) {
   let classes = "section section-works";
   let activeClass = "section section-works section-works-active";
   const [klass, setKlass] = useState(classes);
-  const [activeWork, setActiveWork] = useState(false);
+  // const [activeWork, setActiveWork] = useState(false);
 
   const handleClass = () => {
     setKlass(activeClass);

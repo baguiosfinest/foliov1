@@ -6,7 +6,7 @@ import "./box.scss";
 
 export default function PageBox({ title, color, classname, num, handleBoxClick, randex }) {
   const [active, setActive] = useState(false);
-  console.log(color);
+
   const onHandleClick = () => {
     if(handleBoxClick) {
       handleBoxClick({ num, title, color});
