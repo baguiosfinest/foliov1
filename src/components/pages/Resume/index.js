@@ -32,7 +32,7 @@ export default function Resume({ title, color }) {
     },
     {
       title: "Website",
-      text: "<a href='https://www.igorot.me'>https://www.igorot.me</a></em>",
+      text: "<a href='https://www.igorot.me' target='_blank'>https://www.igorot.me</a></em>",
       icon: "globe"
     }],
     socials: [{
@@ -41,17 +41,17 @@ export default function Resume({ title, color }) {
       icon: "skype"
     },{
       title: "LinkedIn",
-      text: "ynnossence",
+      text: "<a href='www.linkedin.com/in/ynnossence' target='_blank'>ynnossence</a>",
       icon: "linkedin"
     },
     {
       title: "Facebook",
-      text: "ynnossence",
+      text: "<a href='https://www.facebook.com/stambiac' target='_blank'>Sonny Tambiac</a>",
       icon: "facebook"
     },
     {
       title: "Github",
-      text: "ynnossence",
+      text: "<a href='https://github.com/baguiosfinest' target='_blank'>baguiosfinest</a>",
       icon: "github"
     }],
     headline: {
@@ -156,7 +156,7 @@ export default function Resume({ title, color }) {
     <section className="section section-resume">
       <Title title = { title } color = { color } position="center" />
       <div className="paperbox">
-        <Sidebar photo={ data.photo } infos={ data.infos } socials={ data.socials } />
+        <Sidebar headline={ data.headline } photo={ data.photo } infos={ data.infos } socials={ data.socials } />
         <main className="main-content">
           <Header headline={ data.headline } />
           <div className="inner">
@@ -172,7 +172,7 @@ export default function Resume({ title, color }) {
             }) }
             <br /><br />
             <Subtitle title="Skills" icon="tools" />
-            <SkillsBar skills={ data.skills } />
+            <SkillsBar key="skillsbar" skills={ data.skills } />
           </div>
         </main>
       </div>

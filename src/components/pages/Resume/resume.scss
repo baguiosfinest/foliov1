@@ -1,3 +1,6 @@
+@import "../../../css/global";
+@import "../../../css/mixins";
+
 $accent: #E1D4CC;
 
 .section-resume {
@@ -18,12 +21,21 @@ $accent: #E1D4CC;
     .subtitle{
       margin-right: -30px;
     }
+    @include respond-below(sm) {
+      border-right: 10px solid #fff;
+      .subtitle{
+        margin-right: 0;
+      }
+    }
   }
 
   .main-content {
     flex: 3;
     .inner {
       padding: 30px 40px;
+       @include respond-below(sm) {
+         padding: 30px;
+       }
     }
   }
 
@@ -46,6 +58,10 @@ $accent: #E1D4CC;
       font-weight: normal;
       letter-spacing: 1px;
     }
+  }
+
+  @include respond-below(sm) {
+    flex-direction: column;
   }
 
   .photo {
@@ -71,7 +87,6 @@ $accent: #E1D4CC;
 .has-icon {
   margin: 0 0 30px 70px;
   position: relative;
-  
   
   .ic {
     position: absolute;
@@ -105,6 +120,11 @@ $accent: #E1D4CC;
     }
     p {
       margin: 0;
+    }
+    a {
+      color: #000;
+      text-decoration: none;
+      @extend .link-hover-effect;
     }
   }
 }

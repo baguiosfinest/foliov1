@@ -7,7 +7,7 @@ import Loading from "./../Loading";
 import { colorArr, profileColor} from "./../../js/colors";
 import { shuffle } from '../../js/helpers';
 
-import { About, Work, Contact, Playground } from "../pages";
+// import { About, Work, Contact, Playground } from "../pages";
 
 let ranNums = shuffle([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]);
 const pages = [{
@@ -123,7 +123,7 @@ const Home = () => {
           }
         )}
 
-        <ActivePage isActive={active} togglePage={ togglePage } bgcolor={ activeBgColor } color={bgcolor} pageIndex={pagenum} title={pagetitle} />
+        <ActivePage key={'activepage'} isActive={active} togglePage={ togglePage } bgcolor={ activeBgColor } color={bgcolor} pageIndex={pagenum} title={pagetitle} />
       
     </div>
         
