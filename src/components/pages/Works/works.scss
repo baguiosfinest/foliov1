@@ -82,6 +82,7 @@
       flex-direction: column;
       height: 100vh;
       justify-content: center;
+      overflow: hidden;
 
     }
   }
@@ -91,6 +92,7 @@
     height: 0;
     opacity: 1;
     @extend .slide-in-fwd-bottom;
+    
   }
 
   &-active {
@@ -102,6 +104,9 @@
     .work-active {
       height: 90vh;
       padding-top: 10px;
+      @include respond-below(sm) {
+        overflow-y: auto;
+      }
     }
 
      .button-back {

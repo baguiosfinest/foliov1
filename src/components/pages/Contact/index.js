@@ -2,7 +2,6 @@ import React from 'react';
 import Particles from 'react-particles-js';
 import Title from '../../Title';
 import './contact.scss';
-import { stlogo } from '../../../images';
 
 const Contact = ({title, isActive, pageIndex, color, togglePage}) => {
   // const exitPage = () => {
@@ -20,7 +19,7 @@ const Contact = ({title, isActive, pageIndex, color, togglePage}) => {
             params={{
               "particles": {
                   "number": {
-                      "value": 100
+                      "value": 40
                   },
                   "size": {
                       "value": 3
