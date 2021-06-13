@@ -19,7 +19,7 @@ export default function WorkActive({ data, color }) {
           <h3>Tech Used:</h3>
           <p>{ data.tech }</p>
           <p><a className="button" href={data.site}><FontAwesomeIcon icon={ `globe` } /> Site</a>
-            { data.github ? <a className="button" href={'/'}><FontAwesomeIcon icon={ ["fab", 'github'] } /> Source</a> : '' }
+            { data.github ? <a className="button" href={ data.github }><FontAwesomeIcon icon={ ["fab", 'github'] } /> Source</a> : '' }
           </p>
         </div>
         <div className="work-content-right">
