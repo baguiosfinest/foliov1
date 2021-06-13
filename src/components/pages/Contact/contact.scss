@@ -9,6 +9,17 @@
     text-decoration: none;
     border-bottom: #fff 2px solid;
     @extend .link-hover-effect;
-    
+  }
+  position: relative;
+  .content {
+    z-index: 9;
+    position: relative;
+    display: inline-block;
+  }
+  #tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
   }
 }

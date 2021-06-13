@@ -32,6 +32,13 @@ const pages = [{
   "link": "/contact",
 }];
 
+const texts = [
+  {
+    "id": ranNums[5],
+    "page": "Programming is just 1 or 0",
+  }
+];
+
 const Home = () => {
   const [active, setActive] = useState(false);
   const [pagetitle, setPageTitle] = useState('');
