@@ -26,7 +26,7 @@ let works = [{
   really work on a react website as I only been following tutorials to create web apps like todo etc.</p>`,
   image: portfoliov1,
   site: 'https://www.igorot.me',
-  github: ''
+  github: 'https://github.com/baguiosfinest/foliov1'
 },{
   name: 'Betsson',
   url: 'betsson',
