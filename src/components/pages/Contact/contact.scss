@@ -11,16 +11,17 @@
     border-bottom: #fff 2px solid;
     @extend .link-hover-effect;
   }
-  position: relative;
+  
   .content {
     z-index: 9;
     position: relative;
-    display: inline-block;
   }
   #tsparticles {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 0;
      @include respond-below(sm) {
       height: 100%;

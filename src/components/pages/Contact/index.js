@@ -39,7 +39,9 @@ const Contact = ({title, isActive, pageIndex, color, togglePage}) => {
                           "mode": "repulse"
                       }
                   }
-              }
+              },
+              "width": "100%",
+              "height": "100%"
           }} />
     </section>
   )
