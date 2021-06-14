@@ -1,6 +1,8 @@
 import React from 'react';
 import Title from "../../Title";
 import { Header, BulletText, Sidebar, Subtitle, SkillsBar } from "./components";
+import SimpleBar from 'simplebar-react';
+import 'simplebar/dist/simplebar.min.css';
 import './resume.scss';
 
 export default function Resume({ title, color }) {
@@ -151,10 +153,11 @@ export default function Resume({ title, color }) {
 
   let worklen = data.works.length;
   let edulen = data.education.length;
-
+  let paperboxHeight = { maxHeight: 'calc(100vh - 230px)'};
   return (
     <section className="section section-resume">
       <Title title = { title } color = { color } position="center" />
+      <SimpleBar style={paperboxHeight}>
       <div className="paperbox">
         <Sidebar headline={ data.headline } photo={ data.photo } infos={ data.infos } socials={ data.socials } />
         <main className="main-content">
@@ -176,6 +179,7 @@ export default function Resume({ title, color }) {
           </div>
         </main>
       </div>
+      </SimpleBar>
     </section>
   )
 }
